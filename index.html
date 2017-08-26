@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Juspay Sample</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico|Quicksand" rel="stylesheet">
+		<link rel="stylesheet" href="awesomplete.css" />
+		<script src="awesomplete.js" async></script>
+		<script>
+		$( function() {
+		var input=document.getElementById("tags");
+		new Awesomplete(input, {
+		list:  [
+		"ActionScript",
+		"AppleScript",
+		"Asp",
+		"BASIC",
+		"C",
+		"C++",
+		"Clojure",
+		"COBOL",
+		"ColdFusion",
+		"Erlang",
+		"Fortran",
+		"Groovy",
+		"Haskell",
+		"Java",
+		"JavaScript",
+		"Lisp",
+		"Perl",
+		"PHP",
+		"Python",
+		"Ruby",
+		"Scala",
+		"Scheme"
+		]});
+  </script>
+	</head>
+
+	<style>
+		body{
+		font-family: 'Quicksand', sans-serif;
+		background-image: url('bg.png');
+		}
+		h1{
+		font-family: 'Pacifico', cursive;
+		}
+	</style>
+
+	<body>
+		<div class="w3-container">
+			<h1 id="test3" class="w3-display-topmiddle w3-padding-64 w3-margin-top ">Welcome!</h1>
+			<div class="w3-card-2 w3-black w3-round-large w3-opacity-min w3-display-middle w3-center" style="width:30%">
+				<form id="test1" class="w3-container" action="login.php" method="post">
+					<div class="w3-section">
+						<label><b>Mobile:</b></label>
+						<input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="mobile" required>
+						<label><b>Password:</b></label>
+						<input class="w3-input w3-border" type="password" placeholder="Enter Password" name="password" required>
+						<div class="w3-padding-16">
+							<button class="w3-button w3-round w3-indigo w3-medium" type="submit">Login!</button>
+						</div>
+					</div>
+				</form>
+				<h4>New User?</h4>
+				<div id="test2" class="w3-margin-bottom">
+					<button onclick="myFunction('register')" class="w3-button w3-round w3-indigo w3-medium">Register</button>
+				</div>
+				<div id="register" class="w3-container w3-hide">
+					<form class="w3-container" action="register.php" method="post">
+						<div class="w3-section">
+							<label><b>Full Name:</b></label>
+							<input class="w3-input w3-border w3-margin-bottom" type="text" name="name" required>
+							<label><b>Email:</b></label>
+							<input class="w3-input w3-border w3-margin-bottom" type="email" name="email" required>
+							<label><b>Mobile no:</b></label>
+							<input class="w3-input w3-border w3-margin-bottom" type="number" name="mobile" min="7000000000" max="9999999999" required>
+							<label><b>Password:</b></label>
+							<input class="w3-input w3-border w3-margin-bottom" type="password" name="pass" required>
+							<label for="tags"><b>I can teach:</b></label>
+							<input id="tags" class="w3-input w3-border w3-margin-bottom" type="text" name="know">
+							<label for="tags"><b>I want to learn:</b></label>
+							<input id="tags" class="w3-input w3-border w3-margin-bottom" type="text" name="learn">
+							<div id="test" class="w3-margin-bottom w3-padding-16">
+								<button class="w3-button w3-round w3-indigo w3-medium">Register</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	<script>
+	function myFunction(id) {
+    var x = document.getElementById(id);
+    var y = document.getElementById('test1');
+	var z = document.getElementById('test2');
+	var w = document.getElementById('test3');
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        y.className += " w3-hide";
+		z.className += " w3-hide";
+		w.className += " w3-hide";
+    } 	else {
+        x.className = x.className.replace(" w3-show", "");
+		}
+	}
+	</script>
+
+	</body>
+
+</html>
